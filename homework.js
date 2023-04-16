@@ -82,3 +82,25 @@ timmy.buyHamster(gus);
 timmy.ageUp(15);
 timmy.eat(2);
 timmy.excercise(2);
+
+//Task 4
+class Dinner {
+  constructor(appetizer, entree, dessert) {
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert;
+  }
+}
+
+class Chef {
+  cook(appetizer, entree, dessert) {
+    return new Dinner(appetizer, entree, dessert);
+  }
+}
+
+const meChef = new Chef();
+const dinner1 = meChef.cook("mixedGreens", "roastedChicken", "cake");
+const dinner2 = meChef.cook("ravioli", "lambChops", "iceCream");
+const dinner3 = meChef.cook("crabCakes", "primeRibeye", "chocolateMousse");
+
+console.log(dinner1, dinner2, dinner3);
